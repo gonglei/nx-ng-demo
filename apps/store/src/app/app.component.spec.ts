@@ -26,8 +26,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('p')?.textContent).toContain(
-      'banner works'
+    expect(compiled.querySelector('myorg-banner')?.getAttribute('title')).toContain(
+      'Welcome to the store!'
     );
   });
 });
